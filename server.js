@@ -37,8 +37,8 @@ var webSocket = io.listen(httpServer);
 
 webSocket.sockets.on('connection',function(socket){
 
-	socket.on('spacebar',function(spaceB) {
-		socket.broadcast.emit('spaceb',spaceB);
+	socket.on('spacebar',function(spaceB,screenColor) {
+		socket.broadcast.emit('spaceb',spaceB,screenColor);
 	});
 
 });
